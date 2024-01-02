@@ -6,12 +6,21 @@ class TestClass():
         self.a = a
         self.b = b
 
+        type(self).d = a + b
+
     @classmethod
     def opend(cls):
         print(cls.d)
 
+    @staticmethod
+    def statopen(a, b):
+        return a + b
 
 TestClass.opend()
+a = TestClass(2, 3)
+
+TestClass.opend()
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
