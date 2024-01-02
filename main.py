@@ -1,8 +1,17 @@
-# This is a sample Python script.
+class TestClass():
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+    d = 1
 
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    @classmethod
+    def opend(cls):
+        print(cls.d)
+
+
+TestClass.opend()
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
