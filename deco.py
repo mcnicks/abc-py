@@ -5,7 +5,10 @@ def deco(x):
     #return fx
     def outter(fx):
         print('outter', x, fx)
-        return fx
+        def inner(*args, **kwargs):
+            print('inner', *args, **kwargs)
+            return fx(*args, **kwargs)
+        return inner
     return outter
 
 
