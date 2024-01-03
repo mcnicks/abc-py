@@ -1,11 +1,10 @@
 
 
-def deco(x):
+def deco(x):    # main deco, receives argument for deco
     print('deco', x)
-    #return fx
-    def outter(fx):
+    def outter(fx):     #outter deco, receives function
         print('outter', x, fx)
-        def inner(*args, **kwargs):
+        def inner(*args, **kwargs):     # inner deco, receives arguments for func
             print('inner', *args, **kwargs)
             return fx(*args, **kwargs)
         return inner
