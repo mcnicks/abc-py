@@ -9,6 +9,8 @@ class TestClass:
     @staticmethod
     def check_a(a):
         return bool(a)
+    def update_a(self, a):
+        self.a = a
 
     def __init__(self):
         pass
