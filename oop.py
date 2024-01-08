@@ -12,6 +12,6 @@ class TestClass:
     def update_a(self, a):
         self.a = a
 
-    def __init__(self):
-        pass
+    def __init__(self, a):
+        self.a = a
 
