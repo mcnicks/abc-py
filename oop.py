@@ -6,11 +6,13 @@ class TestDescr:
 
     def __set__(self, instance, value):
         print(f'setter: {value=}')
-        instance.__dict__[self.name] = value
+        setattr(instance, self.name, value)
+        #instance.__dict__[self.name] = value
 
     def __get__(self, instance, owner):
         print(f'getter: {self.name=}')
-        return instance.__dict__[self.name]
+        #return instance.__dict__[self.name]
+        return getattr(instance, self.name)
 
 
 class TestClass:
